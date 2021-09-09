@@ -7,7 +7,7 @@ pipeline {
 stages{
     stage ('SCM checkout'){
         steps{
-    		git "https://github.com/sangeetha-rageswaran/Test-Automation"
+    		git "https://github.com/sangeetha-rageswaran/Mendixhttps://github.com/sangeetha-rageswaran/Mendix"
     		}
 
     }
