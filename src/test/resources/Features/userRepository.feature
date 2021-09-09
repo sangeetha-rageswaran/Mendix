@@ -1,4 +1,4 @@
-Feature: Get gitHub repos for a user
+Feature: Get gitHub repos for a user using Chrome
   Narrative:
   As a user
   I want to login to gitHub.com

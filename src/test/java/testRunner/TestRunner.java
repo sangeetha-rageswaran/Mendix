@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions"},
         features = {"src/test/resources/Features/"},
         dryRun = false,
-        plugin = {"pretty","html:test-output.html"}
+        plugin = {"pretty","html:test-output.html"},
+        publish = true
 )
 public class TestRunner {
 }
