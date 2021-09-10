@@ -16,7 +16,7 @@ Feature: Get gitHub repos for a user using Chrome
     And Close the browser
     Examples:
       | username             | userPageTitle                               | repoCount |
-      | sangeetha-rageswaran | Search · user:sangeetha-rageswaran · GitHub |2        |
+      | sangeetha-rageswaran | Search · user:sangeetha-rageswaran · GitHub | 3         |
 
   Scenario: User not able to search for invalid user
     When User Enter the username to search as "random123"
