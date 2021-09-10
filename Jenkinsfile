@@ -5,16 +5,20 @@ pipeline {
         jdk 'JAVA_HOME'
     }
 stages{
-    stage ('SCM checkout'){
+    stage ('build'){
         steps{
-    		git "https://github.com/sangeetha-rageswaran/Mendix"
+//     		git "https://github.com/sangeetha-rageswaran/Mendix"
+echo 'Notify GitLab'
+updateGitlabCommitStatus name: 'build',state:'pending'
+echo 'build step goes here'
+updateGitlabCommitStatus name: 'build', state:'success'
     		}
 
     }
-    stage ('Build') {
+    stage ('test') {
         steps{
             sh "mvn test"
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '..\\Pipeline TestAutomation\\test-output', reportFiles: '*.html', reportName: 'test-output', reportTitles: 'ExtentReportsTestNG.html'])
+//             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '..\\Pipeline TestAutomation\\test-output', reportFiles: '*.html', reportName: 'test-output', reportTitles: 'ExtentReportsTestNG.html'])
     }
 }
 }
